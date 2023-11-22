@@ -2,27 +2,15 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PagesController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
+/*Router::get('/',[PagesController::class, 'fnIndex']) ->name('xInicio');
 */
-
-Route::get('/', function () {
-    return view('welcome');
-}) -> name('xInicio');
-
 Route::get('/saludo', function () {
     return "Hola mundo desde laravel...";
 });
 
-Route::get('/galaria/{num}', function ($num) {
+Route::get('/galeria/{num}', function ($num) {
     return "Este es el codigo de la foto desde laravel: ".$num;
 }) -> where('num', '[0-9]+');
 
@@ -43,3 +31,9 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+/*
+Route::get('/', function () {
+    return view('welcome');
+}) -> name('xInicio');
+*/

@@ -1,3 +1,15 @@
+@extends('pagplantilla')
+
+section('titulo')
+    <h1> Pagina de lista</h1>
+@endesections
+
+@section('seccion')
+<h3   Lista  {{ $valor}} h3>
+@endesection
+
+
+
 <!doctype html>
 <html lang="en">
   <head>
