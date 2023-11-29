@@ -15,6 +15,7 @@ Route::get('/galeria/{num}', function ($num) {
 }) -> where('num', '[0-9]+');
 
 Route::view('/galeria', 'pagGaleria', ['valor' => 15]) -> name('xGaleria'); 
+Route::view('/inicio', 'pagInicio', ['valor' => 15]) -> name('xInicio'); 
 
 Route::get('/lista', function (){
     return view('pagLista');

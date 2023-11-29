@@ -22,6 +22,16 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('estudiante1s');
+        Schema::create('estudiante1s', function (Blueprint $table) {
+            $table->id();
+            $table->string('codEst');
+            $table->string('nomEst');
+            $table->string('apeEst');
+            $table->date('fnaEst');
+            $table->integer('turnMat');  //1,2,3
+            $table->integer('semMat');  //1-6
+            $table->integer('estMat');  //0,1
+            $table->timestamps();
+        });
     }
 };
