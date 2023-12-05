@@ -9,8 +9,12 @@ class PagesController extends Controller
     public function fnIndex(){
         return view('welcome');
     }
-    public function fnlista (){
+    public function fnEstDetalle ($id){
         return view('paglista');
+    }
+    public function fnlista (){
+        $xDetAlumnos = Estudiante::findOrFail($id);     //Datos de BD por Id
+        return view('Estudiante.pagDetalle', compac('xDetAlumnos'));
     }
     public function fnGaleria ($numero=0) {
         $valor = $numero;
