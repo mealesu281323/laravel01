@@ -1,8 +1,12 @@
-@extends('pagplantilla')
+@extends('pagPlantilla')
 
+@section('titulo')
+	<h1> Página galeria </h1>
+@endsection
 
-    <h1>Pagina Galeria </h1>
-<h3 Codigo de la foto {{ $valor}} h3>
+@endsection('seccion')
+	<h3> Foto de codigo: {{ $valor}} </h3>
+@endsection
 
 <!doctype html>
 <html lang="en">
@@ -17,9 +21,9 @@
     <a href="{{ route('xGaleria')}}"> Galeria </a>
     <a href="{{ route('xLista')}}"> Lista </a>
 
-    
-    
-    
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>

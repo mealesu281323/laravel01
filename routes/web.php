@@ -4,16 +4,19 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
 
-/*Router::get('/',[PagesController::class, 'fnIndex']) ->name('xInicio');
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
 */
-Route::get('/saludo', function () {
-    return "Hola mundo desde laravel...";
-});
+// CLONACIÓN para turno noche 
 
-Route::get('/galeria/{num}', function ($num) {
-    return "Este es el codigo de la foto desde laravel: ".$num;
-}) -> where('num', '[0-9]+');
-
+Route::get('/', [PagesController::class, 'fnIndex'])->name('xIndex');
 Route::view('/detalle/{id}', [PagesController::class, 'fnEsDetalle']) -> name('Estudiante.xDetalle');
 Route::view('/galeria', 'pagGaleria', ['valor' => 15]) -> name('xGaleria'); 
 Route::view('/inicio', 'pagInicio', ['valor' => 15]) -> name('xInicio'); 
