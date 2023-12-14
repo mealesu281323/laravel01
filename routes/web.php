@@ -25,6 +25,10 @@ Route::get('/lista', function (){
     return view('pagLista');
 }) -> name('xLista');
 
+Route::get('/listaseguimiento', function (){
+    return view('pagListaseguimiento');
+}) -> name('xListaseguimiento');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
